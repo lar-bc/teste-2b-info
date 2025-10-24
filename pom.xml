@@ -10,4 +10,11 @@
         <maven.compiler.release>21</maven.compiler.release>
         <exec.mainClass>com.mycompany.teste.b.info.Teste2bInfo</exec.mainClass>
     </properties>
+    <dependencies>
+        <dependency>
+        <groupId>com.formdev</groupId>
+        <artifactId>flatlaf</artifactId>
+        <version>3.6.2</version>
+        </dependency>
+    </dependencies>
 </project>
