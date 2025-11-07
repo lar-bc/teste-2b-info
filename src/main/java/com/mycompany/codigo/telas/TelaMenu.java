@@ -29,27 +29,71 @@ public class TelaMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+<<<<<<< HEAD:src/main/java/com/mycompany/codigo/telas/TelaMenu.java
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel1.setText("Menu Principal");
+=======
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("bello");
+
+        jButton1.setText("jButton1");
+
+        jButton2.setText("jButton2");
+
+        jButton3.setText("jButton3");
+>>>>>>> e6e724cbcbc48e7dbfa2e13aa430d11ecdf051ad:src/main/java/com/mycompany/teste/b/info/telas/TelaLogin.java
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD:src/main/java/com/mycompany/codigo/telas/TelaMenu.java
                 .addGap(72, 72, 72)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(80, Short.MAX_VALUE))
+=======
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(169, 169, 169)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(jButton1)
+                        .addGap(85, 85, 85)
+                        .addComponent(jButton2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(140, 140, 140)
+                        .addComponent(jButton3)))
+                .addContainerGap(92, Short.MAX_VALUE))
+>>>>>>> e6e724cbcbc48e7dbfa2e13aa430d11ecdf051ad:src/main/java/com/mycompany/teste/b/info/telas/TelaLogin.java
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD:src/main/java/com/mycompany/codigo/telas/TelaMenu.java
                 .addGap(55, 55, 55)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(203, Short.MAX_VALUE))
+=======
+                .addGap(41, 41, 41)
+                .addComponent(jLabel1)
+                .addGap(39, 39, 39)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addGap(43, 43, 43)
+                .addComponent(jButton3)
+                .addContainerGap(102, Short.MAX_VALUE))
+>>>>>>> e6e724cbcbc48e7dbfa2e13aa430d11ecdf051ad:src/main/java/com/mycompany/teste/b/info/telas/TelaLogin.java
         );
 
         pack();
@@ -91,6 +135,12 @@ public class TelaMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD:src/main/java/com/mycompany/codigo/telas/TelaMenu.java
+=======
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+>>>>>>> e6e724cbcbc48e7dbfa2e13aa430d11ecdf051ad:src/main/java/com/mycompany/teste/b/info/telas/TelaLogin.java
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
