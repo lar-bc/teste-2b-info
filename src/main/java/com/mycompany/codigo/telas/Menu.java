@@ -19,7 +19,6 @@ public class Menu extends javax.swing.JFrame {
     
     public Menu() {
         initComponents();
-        carregarImagens();
     }
 
     /**
@@ -33,39 +32,52 @@ public class Menu extends javax.swing.JFrame {
 
         popupMenu1 = new java.awt.PopupMenu();
         scrollPane1 = new java.awt.ScrollPane();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         popupMenu1.setLabel("popupMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Tela Menu");
+        getContentPane().setLayout(null);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 644, Short.MAX_VALUE)
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/1000057448.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 1220, 620);
+
+        jPanel1.setBackground(new java.awt.Color(240, 223, 200));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1220, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 314, Short.MAX_VALUE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 590, 1220, 100);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void carregarImagens(){
-        ImageIcon icon = new ImageIcon(getClass().getResource("/imagens/LCmodaFeminina.png"));
 
-    // Redimensiona a imagem para caber no JLabel
+
+    /**int largura = (int) (jLabel1.getWidth() * 5);  // 20% maior
+    int altura  = (int) (jLabel1.getHeight() * 5); // 20% maior
+
     Image img = icon.getImage().getScaledInstance(
-           jLabelimagem.getWidth(),
-            jLabelimagem.getHeight(),
+            largura,
+            altura,
             Image.SCALE_SMOOTH
     );
 
-    // Aplica a imagem redimensionada
-    jLabelimagem.setIcon(new ImageIcon(img));
-    }
+    jLabel1.setIcon(new ImageIcon(img));*/
+
+
     
     /**
      * @param args the command line arguments
@@ -78,20 +90,19 @@ public class Menu extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if (!"Windows".equals(info.getName())) {
-                } else {
+                if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(com.mycompany.teste.b.info.telas.TelaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(com.mycompany.teste.b.info.telas.TelaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(com.mycompany.teste.b.info.telas.TelaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(com.mycompany.teste.b.info.telas.TelaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -104,6 +115,8 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private java.awt.PopupMenu popupMenu1;
     private java.awt.ScrollPane scrollPane1;
     // End of variables declaration//GEN-END:variables
