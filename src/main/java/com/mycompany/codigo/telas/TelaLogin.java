@@ -4,8 +4,7 @@
  */
 package com.mycompany.codigo.telas;
 
-import com.formdev.flatlaf.FlatDarkLaf;
-import com.formdev.flatlaf.FlatLightLaf;
+//import formdev.flatlaf.FlatLightLaf;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import models.Usuario;
@@ -131,7 +130,7 @@ public class TelaLogin extends javax.swing.JFrame {
             return;
         }
         
-        TelaMenu telaMenu = new TelaMenu();
+        Menu telaMenu = new Menu();
         telaMenu.setVisible(true);
         this.setVisible(false);        
     }//GEN-LAST:event_btnEntrarLogarActionPerformed
@@ -167,7 +166,7 @@ public class TelaLogin extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        FlatLightLaf.setup();
+        //FlatLightLaf.setup();
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
