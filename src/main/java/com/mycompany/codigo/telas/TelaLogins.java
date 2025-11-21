@@ -1,5 +1,7 @@
 package com.mycompany.codigo.telas;
 
+package com.mycompany.codigo.telas;
+
 //import com.mycompany.codigo.telas.TelaLogins;
 
 
@@ -129,13 +131,35 @@ public class TelaLogins extends javax.swing.JFrame {
             return;
         }
         
+    private void entrarButtonActionPerformed(java.awt.event.ActionEvent evt) {
+    String emailDigitado = emailLoginInput.getText();
+    String cpfDigitado = cpfLoginInput.getText();
+
+    boolean encontrado = false;
+
+    for (User u : BancoMemorias.getUsuarios()) {
+        if (u.getEmail().equals(emailDigitado) && u.getCpf().equals(cpfDigitado)) {
+            encontrado = true;
+            break;
+        }
+    }
+
+    if (encontrado) {
+        JOptionPane.showMessageDialog(this, "Login realizado com sucesso!");
+    } else {
+        JOptionPane.showMessageDialog(this, "Usuário não encontrado!");
+    }
+}
+
+        
 //        TelaMenu telaMenu = new TelaMenu();
 //        telaMenu.setVisible(true);
 //        this.setVisible(false);  
     }//GEN-LAST:event_btnEntrarLogarActionPerformed
 
     private void txtLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginActionPerformed
-        // TODO add your handling code here:
+        
+// TODO add your handling code here:
     }//GEN-LAST:event_txtLoginActionPerformed
 
     private void btnCancelarSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarSairActionPerformed

@@ -5,6 +5,9 @@
  */
 package com.mycompany.codigo.telas;
 
+import cadatro.TelaCadastro;
+import javax.swing.UnsupportedLookAndFeelException;
+
 /**
  *
  * @author Usuario
@@ -30,8 +33,9 @@ public class Menu extends javax.swing.JFrame {
 
         popupMenu1 = new java.awt.PopupMenu();
         scrollPane1 = new java.awt.ScrollPane();
+        irCadastro = new javax.swing.JButton();
+        irLogin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
 
         popupMenu1.setLabel("popupMenu1");
 
@@ -39,28 +43,43 @@ public class Menu extends javax.swing.JFrame {
         setTitle("Tela Menu");
         getContentPane().setLayout(null);
 
+        irCadastro.setText("Cadastro");
+        irCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                irCadastroActionPerformed(evt);
+            }
+        });
+        getContentPane().add(irCadastro);
+        irCadastro.setBounds(480, 570, 120, 23);
+
+        irLogin.setText("Login");
+        irLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                irLoginActionPerformed(evt);
+            }
+        });
+        getContentPane().add(irLogin);
+        irLogin.setBounds(640, 570, 72, 23);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/1000057448.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1220, 620);
-
-        jPanel1.setBackground(new java.awt.Color(240, 223, 200));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1220, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 590, 1220, 100);
+        jLabel1.setBounds(40, -10, 1220, 700);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void irCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_irCadastroActionPerformed
+        // TODO add your handling code here:
+        TelaCadastro tela = new TelaCadastro();
+        tela.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_irCadastroActionPerformed
+
+    private void irLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_irLoginActionPerformed
+        TelaLogins tela = new TelaLogins();
+        tela.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_irLoginActionPerformed
 
 
 
@@ -81,11 +100,6 @@ public class Menu extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -93,28 +107,19 @@ public class Menu extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(com.mycompany.teste.b.info.telas.TelaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(com.mycompany.teste.b.info.telas.TelaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(com.mycompany.teste.b.info.telas.TelaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(com.mycompany.teste.b.info.telas.TelaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | UnsupportedLookAndFeelException ex) {
         }
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Menu().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Menu().setVisible(true);
         });
     }
+        //</editor-fold>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton irCadastro;
+    private javax.swing.JButton irLogin;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
     private java.awt.PopupMenu popupMenu1;
     private java.awt.ScrollPane scrollPane1;
     // End of variables declaration//GEN-END:variables
