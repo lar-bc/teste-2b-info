@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package com.mycompany.codigo.telas;
-import java.awt.Image;
-import javax.swing.ImageIcon;
 
 /**
  *
