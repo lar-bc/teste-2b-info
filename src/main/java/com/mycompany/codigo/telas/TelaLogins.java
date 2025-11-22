@@ -1,9 +1,7 @@
 package com.mycompany.codigo.telas;
-
-
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-
+import user.User;
 
 public class TelaLogins extends javax.swing.JFrame {
     public TelaLogins() {
@@ -24,8 +22,12 @@ public class TelaLogins extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(240, 223, 200));
+
+        jLabel1.setFont(new java.awt.Font("Consola Mono", 0, 12)); // NOI18N
         jLabel1.setText("Login");
 
+        jLabel2.setFont(new java.awt.Font("Consola Mono", 0, 12)); // NOI18N
         jLabel2.setText("Senha");
 
         txtLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -34,6 +36,7 @@ public class TelaLogins extends javax.swing.JFrame {
             }
         });
 
+        btnEntrarLogar.setFont(new java.awt.Font("Consola Mono", 0, 12)); // NOI18N
         btnEntrarLogar.setText("Entrar");
         btnEntrarLogar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -41,6 +44,7 @@ public class TelaLogins extends javax.swing.JFrame {
             }
         });
 
+        btnCancelarSair.setFont(new java.awt.Font("Consola Mono", 0, 12)); // NOI18N
         btnCancelarSair.setText("Cancelar");
         btnCancelarSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,7 +74,7 @@ public class TelaLogins extends javax.swing.JFrame {
                         .addComponent(btnEntrarLogar)
                         .addGap(18, 18, 18)
                         .addComponent(btnCancelarSair)))
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -87,7 +91,7 @@ public class TelaLogins extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEntrarLogar)
                     .addComponent(btnCancelarSair))
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         btnCancelarSair.getAccessibleContext().setAccessibleDescription("");
@@ -119,24 +123,39 @@ public class TelaLogins extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnEntrarLogarActionPerformed
     private void entrarButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        String emailDigitado = emailLoginInput.getText();
-        String cpfDigitado = cpfLoginInput.getText();
+                                                 
+    String emailDigitado = txtLogin.getText();
+    String cpfDigitado = new String(txtSenha.getPassword());
 
-        boolean encontrado = false;
+    if (emailDigitado.isEmpty() || cpfDigitado.isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Preencha todos os campos");
+        return;
+    }
 
-        for (User u : BancoMemorias.getUsuarios()) {
-            if (u.getEmail().equals(emailDigitado) && u.getCpf().equals(cpfDigitado)) {
-                encontrado = true;
-                break;
-            }
-        }
+    boolean encontrado = false;
 
-        if (encontrado) {
-            JOptionPane.showMessageDialog(this, "Login realizado com sucesso!");
-        } else {
-            JOptionPane.showMessageDialog(this, "Usuário não encontrado!");
+    for (User u : BancoMemorias.getUsuarios()) {
+        if (u.getEmail().equals(emailDigitado) && u.getCpf().equals(cpfDigitado)) {
+            encontrado = true;
+            break; // sai do loop assim que encontrar
         }
     }
+
+    if (encontrado) {
+        JOptionPane.showMessageDialog(this, "Login realizado com sucesso!");
+
+        // abre a tela de roupas
+        TelaRoupa telaRoupas = new TelaRoupa();
+        telaRoupas.setVisible(true);
+
+        // fecha a tela de login
+        this.dispose();
+    } else {
+        JOptionPane.showMessageDialog(this, "Usuário não encontrado!");
+    }
+}
+
+
 
     private void txtLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginActionPerformed
     }//GEN-LAST:event_txtLoginActionPerformed
