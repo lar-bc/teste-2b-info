@@ -37,7 +37,9 @@ public class TelaConjuntos extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        adCBlusaS = new javax.swing.JButton();
+        adCCasual = new javax.swing.JButton();
+        adCFitness = new javax.swing.JButton();
 
         jToggleButton1.setText("jToggleButton1");
 
@@ -46,73 +48,93 @@ public class TelaConjuntos extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(240, 223, 200));
         jPanel1.setPreferredSize(new java.awt.Dimension(650, 400));
 
-        jLabel1.setText("jLabel1");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/conjunto esportivo.png"))); // NOI18N
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setFont(new java.awt.Font("Consola Mono", 0, 12)); // NOI18N
+        jLabel2.setText("Conjunto Fitness");
 
-        jLabel3.setText("jLabel3");
+        jLabel3.setFont(new java.awt.Font("Consola Mono", 0, 12)); // NOI18N
+        jLabel3.setText("R$129,90");
 
-        jLabel4.setText("jLabel4");
+        jLabel4.setFont(new java.awt.Font("Consola Mono", 0, 12)); // NOI18N
+        jLabel4.setText("R$119,90");
 
-        jLabel5.setText("jLabel5");
+        jLabel5.setFont(new java.awt.Font("Consola Mono", 0, 12)); // NOI18N
+        jLabel5.setText("Conjunto Blusa e Short");
 
-        jLabel6.setText("jLabel6");
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/conjunto blusa e short.png"))); // NOI18N
 
-        jLabel7.setText("jLabel7");
+        jLabel7.setFont(new java.awt.Font("Consola Mono", 0, 12)); // NOI18N
+        jLabel7.setText("R$139,90");
 
-        jLabel8.setText("jLabel8");
+        jLabel8.setFont(new java.awt.Font("Consola Mono", 0, 12)); // NOI18N
+        jLabel8.setText("Conjunto Casual");
 
-        jLabel9.setText("jLabel9");
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/conjunto casual.png"))); // NOI18N
 
-        jButton1.setText("jButton1");
+        adCBlusaS.setFont(new java.awt.Font("Consola Mono", 0, 10)); // NOI18N
+        adCBlusaS.setText("Adicionar ao carrinho");
+        adCBlusaS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adCBlusaSActionPerformed(evt);
+            }
+        });
+
+        adCCasual.setFont(new java.awt.Font("Consola Mono", 0, 10)); // NOI18N
+        adCCasual.setText("Adicionar ao carrinho");
+
+        adCFitness.setFont(new java.awt.Font("Consola Mono", 0, 10)); // NOI18N
+        adCFitness.setText("Adicionar ao carrinho");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(90, 90, 90)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
+                    .addComponent(jLabel6)
                     .addComponent(jLabel5)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
+                    .addComponent(jLabel4)
+                    .addComponent(adCBlusaS))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
                     .addComponent(jLabel8)
+                    .addComponent(adCCasual)
                     .addComponent(jLabel9))
-                .addGap(161, 161, 161)
+                .addGap(48, 48, 48)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
                     .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(adCFitness)
                     .addComponent(jLabel1))
-                .addGap(112, 112, 112))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(171, 171, 171)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(66, 66, 66))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(218, Short.MAX_VALUE)
+                .addContainerGap(170, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel9))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
                     .addComponent(jLabel5)
-                    .addComponent(jLabel8))
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
                     .addComponent(jLabel4)
-                    .addComponent(jLabel7))
-                .addGap(28, 28, 28)
-                .addComponent(jButton1)
-                .addGap(59, 59, 59))
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(adCBlusaS)
+                    .addComponent(adCCasual)
+                    .addComponent(adCFitness))
+                .addGap(189, 189, 189))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -124,12 +146,16 @@ public class TelaConjuntos extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 646, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void adCBlusaSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adCBlusaSActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_adCBlusaSActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,7 +193,9 @@ public class TelaConjuntos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton adCBlusaS;
+    private javax.swing.JButton adCCasual;
+    private javax.swing.JButton adCFitness;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

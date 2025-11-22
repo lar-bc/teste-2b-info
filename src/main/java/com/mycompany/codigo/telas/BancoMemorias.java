@@ -13,4 +13,10 @@ public class BancoMemorias{
     public static ArrayList<User> getUsuarios() {
         return usuarios;
     }
+
+    static class carrinho {
+
+        public carrinho() {
+        }
+    }
 }

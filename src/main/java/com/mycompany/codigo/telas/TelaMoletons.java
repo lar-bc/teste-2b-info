@@ -40,29 +40,35 @@ public class TelaMoletons extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(240, 223, 200));
         jPanel1.setLayout(null);
 
+        jLabel1.setFont(new java.awt.Font("Consola Mono", 0, 12)); // NOI18N
         jLabel1.setText("Moletom  Oversized");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(49, 226, 94, 14);
+        jLabel1.setBounds(49, 226, 140, 17);
 
+        jLabel2.setFont(new java.awt.Font("Consola Mono", 0, 12)); // NOI18N
         jLabel2.setText("Moletom com Zíper");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(250, 226, 89, 14);
+        jLabel2.setBounds(250, 226, 140, 17);
 
+        jLabel3.setFont(new java.awt.Font("Consola Mono", 0, 12)); // NOI18N
         jLabel3.setText("Moletom Canguru");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(450, 230, 84, 20);
+        jLabel3.setBounds(450, 230, 130, 20);
 
+        jLabel4.setFont(new java.awt.Font("Consola Mono", 0, 12)); // NOI18N
         jLabel4.setText("R$ 129,90");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(49, 246, 50, 14);
+        jLabel4.setBounds(49, 246, 100, 17);
 
+        jLabel5.setFont(new java.awt.Font("Consola Mono", 0, 12)); // NOI18N
         jLabel5.setText("R$ 139,90");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(250, 246, 50, 14);
+        jLabel5.setBounds(250, 246, 100, 17);
 
+        jLabel6.setFont(new java.awt.Font("Consola Mono", 0, 12)); // NOI18N
         jLabel6.setText("R$ 58,90");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(450, 250, 44, 20);
+        jLabel6.setBounds(450, 250, 90, 20);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Sem nome (378 x 378 px) (378 x 284 px) (155 x 190 px)_20251121_193957_0000.png"))); // NOI18N
         jPanel1.add(jLabel7);
@@ -76,6 +82,7 @@ public class TelaMoletons extends javax.swing.JFrame {
         jPanel1.add(jLabel9);
         jLabel9.setBounds(440, 30, 160, 190);
 
+        adcMOversize.setFont(new java.awt.Font("Consola Mono", 0, 10)); // NOI18N
         adcMOversize.setText("Adicionar ao carrinho");
         adcMOversize.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,8 +90,9 @@ public class TelaMoletons extends javax.swing.JFrame {
             }
         });
         jPanel1.add(adcMOversize);
-        adcMOversize.setBounds(40, 290, 150, 23);
+        adcMOversize.setBounds(40, 290, 200, 23);
 
+        adcMZiper.setFont(new java.awt.Font("Consola Mono", 0, 10)); // NOI18N
         adcMZiper.setText("Adicionar ao carrinho ");
         adcMZiper.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,8 +100,9 @@ public class TelaMoletons extends javax.swing.JFrame {
             }
         });
         jPanel1.add(adcMZiper);
-        adcMZiper.setBounds(240, 290, 160, 23);
+        adcMZiper.setBounds(240, 290, 210, 23);
 
+        adcMCagunru.setFont(new java.awt.Font("Consola Mono", 0, 10)); // NOI18N
         adcMCagunru.setText("Adicionar ao carrinho ");
         adcMCagunru.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,7 +110,7 @@ public class TelaMoletons extends javax.swing.JFrame {
             }
         });
         jPanel1.add(adcMCagunru);
-        adcMCagunru.setBounds(440, 290, 170, 23);
+        adcMCagunru.setBounds(440, 290, 220, 23);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
