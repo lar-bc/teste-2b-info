@@ -49,7 +49,7 @@ public class TelaShorts extends javax.swing.JFrame {
 
         jLabel4.setText("Short de Alfaiataria");
 
-        jLabel5.setText("R$99.99");
+        jLabel5.setText("R$99,99");
 
         jLabel7.setText("Short Esportivo");
 

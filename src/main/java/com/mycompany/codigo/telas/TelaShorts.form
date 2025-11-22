@@ -136,7 +136,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
-            <Property name="text" type="java.lang.String" value="R$99.99"/>
+            <Property name="text" type="java.lang.String" value="R$99,99"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel7">
