@@ -34,6 +34,8 @@ public class TelaMoletons extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         adcMOversize = new javax.swing.JButton();
+        adcMZiper = new javax.swing.JButton();
+        adcMCagunru = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(240, 223, 200));
@@ -43,27 +45,27 @@ public class TelaMoletons extends javax.swing.JFrame {
 
         jLabel1.setText("Moletom  Oversized");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(49, 226, 106, 16);
+        jLabel1.setBounds(49, 226, 94, 14);
 
         jLabel2.setText("Moletom com Zíper");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(250, 226, 106, 16);
+        jLabel2.setBounds(250, 226, 89, 14);
 
         jLabel3.setText("Moletom Canguru");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(450, 230, 98, 20);
+        jLabel3.setBounds(450, 230, 84, 20);
 
         jLabel4.setText("R$ 129,90");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(49, 246, 49, 16);
+        jLabel4.setBounds(49, 246, 50, 14);
 
         jLabel5.setText("R$ 139,90");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(250, 246, 49, 16);
+        jLabel5.setBounds(250, 246, 50, 14);
 
         jLabel6.setText("R$ 58,90");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(450, 250, 43, 20);
+        jLabel6.setBounds(450, 250, 44, 20);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Sem nome (378 x 378 px) (378 x 284 px) (155 x 190 px)_20251121_193957_0000.png"))); // NOI18N
         jPanel1.add(jLabel7);
@@ -84,7 +86,25 @@ public class TelaMoletons extends javax.swing.JFrame {
             }
         });
         jPanel1.add(adcMOversize);
-        adcMOversize.setBounds(40, 330, 150, 23);
+        adcMOversize.setBounds(40, 290, 150, 23);
+
+        adcMZiper.setText("Adicionar ao carrinho ");
+        adcMZiper.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adcMZiperActionPerformed(evt);
+            }
+        });
+        jPanel1.add(adcMZiper);
+        adcMZiper.setBounds(240, 290, 160, 23);
+
+        adcMCagunru.setText("Adicionar ao carrinho ");
+        adcMCagunru.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adcMCagunruActionPerformed(evt);
+            }
+        });
+        jPanel1.add(adcMCagunru);
+        adcMCagunru.setBounds(440, 290, 170, 23);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -106,13 +126,11 @@ public class TelaMoletons extends javax.swing.JFrame {
 
     private void adcMOversizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adcMOversizeActionPerformed
                                     
-    // Cria o item que vai ser adicionado
-    Item itemAtual = new Item("Moletom Preto", 120.0, "Moletom tamanho M");
-
-    // Adiciona ao carrinho usando a instância
+ 
+    Item itemAtual = new Item("Moletom Preto", 129.90, "Moletom tamanho M");
+    
     carrinho.adicionarItem(itemAtual);
 
-    // Atualiza a área do carrinho
     String texto = "";
     for (Item i : carrinho.getItens()) {
         texto += i.getNome() + " - R$" + i.getPreco() + "\n";
@@ -121,6 +139,34 @@ public class TelaMoletons extends javax.swing.JFrame {
     areaCarrinho.setText(texto);
   // TODO add your handling code here:
     }//GEN-LAST:event_adcMOversizeActionPerformed
+
+    private void adcMZiperActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adcMZiperActionPerformed
+        // TODO add your handling code here:
+        Item itemAtual = new Item("Moletom Cinza Ziper", 139.90, "Moletom tamanho M");
+    
+    carrinho.adicionarItem(itemAtual);
+
+    String texto = "";
+    for (Item i : carrinho.getItens()) {
+        texto += i.getNome() + " - R$" + i.getPreco() + "\n";
+    }
+    texto += "\nTotal: R$" + carrinho.getTotal();
+    areaCarrinho.setText(texto);
+    }//GEN-LAST:event_adcMZiperActionPerformed
+
+    private void adcMCagunruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adcMCagunruActionPerformed
+        // TODO add your handling code here:
+    Item itemAtual = new Item("Moletom New York", 58.90, "Moletom tamanho M");
+    
+    carrinho.adicionarItem(itemAtual);
+
+    String texto = "";
+    for (Item i : carrinho.getItens()) {
+        texto += i.getNome() + " - R$" + i.getPreco() + "\n";
+    }
+    texto += "\nTotal: R$" + carrinho.getTotal();
+    areaCarrinho.setText(texto);
+    }//GEN-LAST:event_adcMCagunruActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,7 +204,9 @@ public class TelaMoletons extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton adcMCagunru;
     private javax.swing.JButton adcMOversize;
+    private javax.swing.JButton adcMZiper;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel jLabel1;
