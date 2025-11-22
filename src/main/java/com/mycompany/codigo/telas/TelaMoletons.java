@@ -5,7 +5,8 @@
 package com.mycompany.codigo.telas;
 
 public class TelaMoletons extends javax.swing.JFrame {
-       
+    private Carrinho carrinho = new Carrinho();
+    private javax.swing.JTextArea areaCarrinho;
     public TelaMoletons() {
         initComponents();
         
@@ -104,12 +105,12 @@ public class TelaMoletons extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void adcMOversizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adcMOversizeActionPerformed
-       // Adiciona o item ao carrinho
+                                    
     // Cria o item que vai ser adicionado
     Item itemAtual = new Item("Moletom Preto", 120.0, "Moletom tamanho M");
 
-    // Adiciona ao carrinho
-    Carrinho.adicionarItem(itemAtual);
+    // Adiciona ao carrinho usando a instância
+    carrinho.adicionarItem(itemAtual);
 
     // Atualiza a área do carrinho
     String texto = "";
@@ -118,9 +119,7 @@ public class TelaMoletons extends javax.swing.JFrame {
     }
     texto += "\nTotal: R$" + carrinho.getTotal();
     areaCarrinho.setText(texto);
-
-
-        // TODO add your handling code here:
+  // TODO add your handling code here:
     }//GEN-LAST:event_adcMOversizeActionPerformed
 
     /**
