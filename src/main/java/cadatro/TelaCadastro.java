@@ -1,9 +1,5 @@
 package cadatro;
 
-//ackage com.mycompany.codigo.telas;
-
-import TelaLogins;
-
 import user.User;
 import com.mycompany.codigo.telas.TelaLogins;
 import com.mycompany.codigo.telas.BancoMemorias;
@@ -439,15 +435,13 @@ public class TelaCadastro extends javax.swing.JFrame{
         compInput.getText()
     );
 
-    BancoMemorias.adicionarUsuario(user u);
+    BancoMemorias.adicionarUsuario(user);
 
     JOptionPane.showMessageDialog(this, "Cadastro realizado com sucesso!");
 
     TelaLogins login = new TelaLogins();
     login.setVisible(true);
     dispose();
-}
-
         // TODO add your handling code here:
         
     }//GEN-LAST:event_enviarButtonActionPerformed
