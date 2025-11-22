@@ -1,13 +1,12 @@
 package com.mycompany.codigo.telas;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Carrinho {
-    private ArrayList<Item> itens = new ArrayList<>();
-
+    private List<Item> itens = new ArrayList<Item>();
 
     public Carrinho() {
-        itens = new ArrayList<>();
     }
 
     public void adicionarItem(Item item) {
@@ -18,7 +17,7 @@ public class Carrinho {
         itens.remove(item);
     }
 
-    public ArrayList<Item> getItens() {
+    public List<Item> getItens() {
         return itens;
     }
 
