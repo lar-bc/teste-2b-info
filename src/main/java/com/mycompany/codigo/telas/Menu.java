@@ -35,7 +35,7 @@ public class Menu extends javax.swing.JFrame {
         scrollPane1 = new java.awt.ScrollPane();
         irCadastro = new javax.swing.JButton();
         irLogin = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         popupMenu1.setLabel("popupMenu1");
 
@@ -43,6 +43,7 @@ public class Menu extends javax.swing.JFrame {
         setTitle("Tela Menu");
         getContentPane().setLayout(null);
 
+        irCadastro.setFont(new java.awt.Font("Consola Mono", 0, 12)); // NOI18N
         irCadastro.setText("Cadastro");
         irCadastro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,8 +51,9 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(irCadastro);
-        irCadastro.setBounds(480, 570, 120, 23);
+        irCadastro.setBounds(460, 570, 170, 25);
 
+        irLogin.setFont(new java.awt.Font("Consola Mono", 0, 12)); // NOI18N
         irLogin.setText("Login");
         irLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,11 +61,11 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(irLogin);
-        irLogin.setBounds(640, 570, 72, 23);
+        irLogin.setBounds(660, 570, 110, 25);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/1000057448.png"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(40, -10, 1220, 700);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/1000057448.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 1290, 690);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -119,7 +121,7 @@ public class Menu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton irCadastro;
     private javax.swing.JButton irLogin;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private java.awt.PopupMenu popupMenu1;
     private java.awt.ScrollPane scrollPane1;
     // End of variables declaration//GEN-END:variables
