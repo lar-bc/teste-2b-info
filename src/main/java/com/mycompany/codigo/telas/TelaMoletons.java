@@ -4,17 +4,11 @@
  */
 package com.mycompany.codigo.telas;
 
-/**
- *
- * @author onesm
- */
 public class TelaMoletons extends javax.swing.JFrame {
-
-    /**
-     * Creates new form TelaMoletons
-     */
+       
     public TelaMoletons() {
         initComponents();
+        
     }
 
     /**
@@ -26,21 +20,108 @@ public class TelaMoletons extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        adcMOversize = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(240, 223, 200));
+
+        jPanel1.setBackground(new java.awt.Color(240, 223, 200));
+        jPanel1.setLayout(null);
+
+        jLabel1.setText("Moletom  Oversized");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(49, 226, 94, 14);
+
+        jLabel2.setText("Moletom com Zíper");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(250, 226, 89, 14);
+
+        jLabel3.setText("Moletom Canguru");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(450, 230, 84, 20);
+
+        jLabel4.setText("R$ 129,90");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(49, 246, 50, 14);
+
+        jLabel5.setText("R$ 139,90");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(250, 246, 50, 14);
+
+        jLabel6.setText("R$ 58,90");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(450, 250, 44, 20);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Sem nome (378 x 378 px) (378 x 284 px) (155 x 190 px)_20251121_193957_0000.png"))); // NOI18N
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(240, 30, 155, 190);
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Sem nome (378 x 378 px) (378 x 284 px) (155 x 190 px)_20251121_193957_0001.png"))); // NOI18N
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(40, 30, 160, 190);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Sem nome (378 x 378 px) (378 x 284 px) (155 x 190 px)_20251121_193958_0002.png"))); // NOI18N
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(440, 30, 160, 190);
+
+        adcMOversize.setText("Adicionar ao carrinho");
+        adcMOversize.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adcMOversizeActionPerformed(evt);
+            }
+        });
+        jPanel1.add(adcMOversize);
+        adcMOversize.setBounds(50, 270, 150, 23);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void adcMOversizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adcMOversizeActionPerformed
+       // Adiciona o item ao carrinho
+    // Cria o item que vai ser adicionado
+    Item itemAtual = new Item("Moletom Preto", 120.0, "Moletom tamanho M");
+
+    // Adiciona ao carrinho
+    Carrinho.adicionarItem(itemAtual);
+
+    // Atualiza a área do carrinho
+    String texto = "";
+    for (Item i : carrinho.getItens()) {
+        texto += i.getNome() + " - R$" + i.getPreco() + "\n";
+    }
+    texto += "\nTotal: R$" + carrinho.getTotal();
+    areaCarrinho.setText(texto);
+
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_adcMOversizeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +159,18 @@ public class TelaMoletons extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton adcMOversize;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
