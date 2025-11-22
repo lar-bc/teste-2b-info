@@ -42,27 +42,27 @@ public class TelaMoletons extends javax.swing.JFrame {
 
         jLabel1.setText("Moletom  Oversized");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(49, 226, 94, 14);
+        jLabel1.setBounds(49, 226, 106, 16);
 
         jLabel2.setText("Moletom com Zíper");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(250, 226, 89, 14);
+        jLabel2.setBounds(250, 226, 106, 16);
 
         jLabel3.setText("Moletom Canguru");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(450, 230, 84, 20);
+        jLabel3.setBounds(450, 230, 98, 20);
 
         jLabel4.setText("R$ 129,90");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(49, 246, 50, 14);
+        jLabel4.setBounds(49, 246, 49, 16);
 
         jLabel5.setText("R$ 139,90");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(250, 246, 50, 14);
+        jLabel5.setBounds(250, 246, 49, 16);
 
         jLabel6.setText("R$ 58,90");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(450, 250, 44, 20);
+        jLabel6.setBounds(450, 250, 43, 20);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Sem nome (378 x 378 px) (378 x 284 px) (155 x 190 px)_20251121_193957_0000.png"))); // NOI18N
         jPanel1.add(jLabel7);
@@ -83,7 +83,7 @@ public class TelaMoletons extends javax.swing.JFrame {
             }
         });
         jPanel1.add(adcMOversize);
-        adcMOversize.setBounds(50, 270, 150, 23);
+        adcMOversize.setBounds(40, 330, 150, 23);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
