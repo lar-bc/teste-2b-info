@@ -1,11 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package com.mycompany.codigo.telas;
 
 public class TelaMoletons extends javax.swing.JFrame {
-    private Carrinho carrinho = new Carrinho();
+    private final Carrinho carrinho = new Carrinho();
     private javax.swing.JTextArea areaCarrinho;
     public TelaMoletons() {
         initComponents();
