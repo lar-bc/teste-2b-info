@@ -13,66 +13,57 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.release>21</maven.compiler.release>
-        <!-- Classe principal (altere se necessário) -->
-        <exec.mainClass>com.mycompany.teste.b.info.Teste2bInfo</exec.mainClass>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <exec.mainClass>com.mycompany.codigo.telas.TelaMoletons</exec.mainClass>
     </properties>
 
     <build>
         <plugins>
-
-            <!-- Plugin para compilar com preview -->
+            <!-- Plugin de compilação -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.13.0</version>
+                <version>3.11.0</version>
                 <configuration>
-                    <compilerArgs>
-                        <arg>--enable-preview</arg>
-                    </compilerArgs>
+                    <source>21</source>
+                    <target>21</target>
                 </configuration>
             </plugin>
 
-            <!-- Plugin para rodar projetos via NetBeans/Maven -->
+            <!-- Plugin para rodar a aplicação -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                    </execution>
-                </executions>
                 <configuration>
                     <mainClass>${exec.mainClass}</mainClass>
                 </configuration>
             </plugin>
-            
-
         </plugins>
     </build>
 
     <dependencies>
+        <!-- FlatLaf para interface -->
         <dependency>
             <groupId>com.formdev</groupId>
             <artifactId>flatlaf</artifactId>
             <version>3.6.2</version>
         </dependency>
 
+        <!-- Eclipselink (JPA) -->
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>eclipselink</artifactId>
             <version>2.5.2</version>
         </dependency>
-        
+
+        <!-- MySQL Connector atualizado -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
-            <version>8.0.33</version>
+            <version>8.1.0</version>
         </dependency>
-
     </dependencies>
 
 </project>
